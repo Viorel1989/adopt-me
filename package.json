@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/Viorel1989/adopt-me#readme",
   "devDependencies": {
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
     "parcel": "^2.5.0"
   },
   "dependencies": {

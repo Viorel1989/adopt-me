@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { useParams } from "react-router-dom";
 
 class Details extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Details extends Component {
 
     const json = await res.json();
 
-    this.setState(Object.assign({ loading: false }, json.pets[0]));
+    this.setState({ loading: false, ...json.pets[0] });
   }
 
   render() {
@@ -39,4 +40,9 @@ class Details extends Component {
   }
 }
 
-export default Details;
+const WrappedDetails = () => {
+  const params = useParams();
+  return <Details params={params} />;
+};
+
+export default WrappedDetails;
